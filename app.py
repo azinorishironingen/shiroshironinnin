@@ -24,4 +24,17 @@ def new():
     print(request.form["ajinori"])
     Ajinori.create(name=request.form["ajinori"])
     return redirect("/add")
+
+@app.route("/edit-ajinori/<id>",methods=["POST"])
+def update(id):
+    ajinori = Ajinori.get(id=id)
+    ajinori.name = request.form["ajinori"]
+    ajinori.save()
+    return redirect("/")
+
+@app.route("/delete-ajinori/<id>",methods=["POST"])
+def delete(id):
+    ajinori = Ajinori.get(id=id)
+    ajinori.delete_instance()
+    return redirect("/")
 app.run(debug=True)

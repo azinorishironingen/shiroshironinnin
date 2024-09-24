@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </head>
 <body>
-    <form action="/edit-ajinori" method="post">
+    <form action="/edit-ajinori/{{  ajinori.id }}" method="post">
         <h2>ここなおす、けす</h2>
         <div class="input-group mb-3">
          <span class="input-group-text">あじ</span>
@@ -16,6 +16,32 @@
          <span class="input-group-text">のり</span>
        </div>
        <button type="submit" class="btn btn-danger">直す</button>
+       <a href="/" class="btn btn-light">はじめにもどるよ</a>
+      </form>
+      <form action="/delete-ajinori/{{  ajinori.id }}" method="post">
+      <!-- Button trigger modal -->
+<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    消したいなら押そう
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">あじのりが悲鳴をあげています！！</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          このあじのり、ほんとに消しちゃっていいの？ほんとに？あじのりがかわいそうだよ。もう何も言わないよ。自分で決めてね。
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">消さないであげる(とじる)</button>
+          <button type="submit" class="btn btn-danger">けしちゃいます！！</button>
+        </div>
+      </div>
+    </div>
+  </div>
       </form>
 </body>
 </html>
