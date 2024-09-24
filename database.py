@@ -10,4 +10,4 @@ class Ajinori(Model):
 
 db.create_tables([Ajinori])
 
-Ajinori.create(name="白白人間")
+

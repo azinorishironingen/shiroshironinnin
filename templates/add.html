@@ -9,12 +9,14 @@
 
 </head>
 <body>
-   <h2>ここついか</h2> 
-   <div class="input-group mb-3">
-    <span class="input-group-text">$</span>
-    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-    <span class="input-group-text">.00</span>
-  </div>
-  <button type="button" class="btn btn-danger">追加</button>
+  <form action="/new-ajinori" method="post">
+    <h2>ここついか</h2> 
+    <div class="input-group mb-3">
+     <span class="input-group-text">あじ</span>
+     <input name="ajinori" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+     <span class="input-group-text">のり</span>
+   </div>
+   <button type="submit" class="btn btn-danger">追加</button>
+  </form>
 </body>
 </html>

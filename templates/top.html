@@ -8,8 +8,30 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </head>
 <body>
+
     <h1>ここは、はじめのページなんだよ</h1>
     <a class="btn btn-warning" href="/add">ついかのとこいくよ</a>
-    <a class="btn btn-success" href="/edit">なおすとこいくよ</a>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">おなまえ</th>
+            <th scope="col">なおす</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for ajinori in ajinories %}
+          <tr>
+            <th scope="row">{{ajinori.id}}</th>
+            <td>    
+                {{ajinori.name}}
+            </td>
+            <td>    
+                <a class="btn btn-success" href="/edit/{{ajinori.id}}">なおすとこいくよ</a>
+            </td>
+          </tr>
+            {%endfor%}
+        </tbody>
+      </table>
 </body>
 </html>
