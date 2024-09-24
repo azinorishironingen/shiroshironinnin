@@ -37,4 +37,4 @@ def delete(id):
     ajinori = Ajinori.get(id=id)
     ajinori.delete_instance()
     return redirect("/")
-app.run(debug=True)
+app.run(host="0.0.0.0",debug=True)
